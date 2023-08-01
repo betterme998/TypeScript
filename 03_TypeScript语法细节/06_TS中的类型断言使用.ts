@@ -20,6 +20,7 @@ const age:number = 18
 // const age2 = age as string
 
 // ts类型检查来说正确，但是这个代码本身不太正确
-// const age3 = 
+// const age3 = age as any
+// const age4 = age3 as string
 
 export {}

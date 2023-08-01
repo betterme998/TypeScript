@@ -25,3 +25,4 @@ const info: IKun & ICoder = {
     
   }
 }
+export{}
