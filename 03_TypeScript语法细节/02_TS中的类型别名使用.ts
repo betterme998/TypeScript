@@ -16,3 +16,4 @@ function printCoordinate(point:PointType) {
   console.log(point.x);
   
 }
+export{}
