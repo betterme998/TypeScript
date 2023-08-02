@@ -9,5 +9,13 @@
   // .在后续调用函数传入参数时，从第二个参数开始传递，this参数会在编译后被抹除
 
 
+  // 2.普通的函数
+  function foo(this: {name: string},info:{name:string}) {
+    console.log(this);
+  }
+
+  // 第一个参数绑定this
+  foo.call({name:"why"},{name:"kobe"})
+
 
 export{}

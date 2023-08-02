@@ -130,4 +130,39 @@
     .在typescript中
 
   可推导的this类型
+
+# this相关的内置工具
+  typescript提供一些辅助工具进行类型转换，全局可用
+  .ThisParameterType:
+    .用于提取一个函数类型Type的this参数类型
+    .如果这个函数类型没有this参数返回unknown
+  .OmitThisParameter
+    .用于移除一个函数类型Type的this参数类型，并且返回当前的函数类型
+
+
+# TypeScript类的使用
+  .使用class关键字定义一个类
+  .我们可用声明类的属性：在类的内部声明类的属性以及对应的类型
+    .如果类型没有声明，那么它们默认是any的
+    .我们也可以给属性设置初始化
+    .在默认的strictPropertylnitialzation模式下面我们必须初始化，如果没有初始化编译会报错
+      .如果在strictPropertylnitialzation模式下面不希望给属性初始化，可以使用name!:string语法
+
+  类的继承
+    使用extends关键字来实现继承，子类中使用super来访问父类
+
+    class Student extends Person {}
+    .Student类继承自Person
+      .student类可以有自己的属性和方法，并且会继承Person属性和方法
+      .构造函数中，我们可以通过super来调用父类的构造方法，对父类中的属性进行初始化
+
+  类的成员修饰符
+    .public修饰的是任何地方可见，公有的属性或方法，默认编写的属性就是public
+    .private修饰的是仅在同一类中可见，私有的属性或方法
+    .protected修饰的是仅在类自身及子类中可见，受保护的属性或方法
+# TypeScript中抽象类
+# TypeScript对象类型
+# TypeScript接口补充
+# 特殊：严格字面量检测
+# TypeScript枚举类型
     
