@@ -11,7 +11,7 @@ class Person {
   // constructor里面初始化
   constructor(name:string, age:number) {
     this.name = name
-    this.age = age
+    this.age = age  
   }
 
   eating() {

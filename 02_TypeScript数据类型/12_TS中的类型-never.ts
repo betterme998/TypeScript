@@ -41,3 +41,5 @@ handleMessage(123)
 // 另外一个同事调用时传入布尔类型，为了确保不报错，添加boolean类型，但是函数本身没有对布尔类型就行处理，而且还不报错，代码不严谨
 // 这时switch语法 的default加上 never类型时，再传入boolean类型时就会报错，因为这个值永远不会发生。就知道了要再库里加上boolean类型的处理逻辑
 handleMessage(true)
+
+export{}
