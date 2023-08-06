@@ -287,12 +287,32 @@
 # tsconfig配置文件解析
   认识tsconfig.json文件
   .当目录中出现tsconfig.json文件，则说明该目录是typescrupt
+  .tsconfig.json文件指定了编译项目所需的根目录下文件以及编译选项 （ts文件以什么方式进行编译）
+  .tsconfig.json文件有两个作业
+    作用一(主要的作用):让Typescript Compiler在编译的时候，知道如何去编译TypeScript代码和进行类型检测
+      .比如是否允许不明确this选项，是否允许隐藏式的any类型
+      .将TypeScript代码编译成什么版本的JavaScript
+    作用二：让编译器（比如VSCode）可以按照正确的方式识别TypeScript代码
+      .对于哪些语法进行提示，类型错误检测等等
+
+  tsconfig.json在编译时如何被使用？
+    .在调用tsc命令并且没有其他输入文件参数时，编译器将由当前目录开始向父级目录寻找包含tsconfig文件的目录.
+    调用tsc命令并且没有其他输入文件参数，可以使用--project（或者只是-p）的命令行选项来指定包含了tsconfig.json的目录
+    .当命令行输入指定文件产生，tsconfig.json文件会被忽略
+
+  webpack中使用ts-loader进行打包时，会自动读取tsconfig文件，根据配置编译Typescript代码
+
+  tsconfig.json文件包括哪些选项呢？
+    .查看文档：https://www.typescriptlang.org/tsconfig
+    .当我们开发项目时选择typescript模板时tsconfig文件会默认帮助我们配置好
 
 
+<!-- tsconfig.json 文件选项 -->
+https://www.typescriptlang.org/tsconfig
 增强自己typescript能力，做类型体操题目
 <!-- 题目 -->
 https://github.com/type-challenges/type-challenges
-<!-- 答案 -->
+<!-- 题目+答案 -->
 https://ghaiklor.github.io/type-challenges-solutions/en/
 
     
