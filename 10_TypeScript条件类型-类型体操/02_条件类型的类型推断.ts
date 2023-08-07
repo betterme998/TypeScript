@@ -26,4 +26,6 @@ type MyParameterType<T extends (...args:any[]) => any> = T extends (...args: inf
 
 // 自己封装的 推断出是string类型
 type FooMyReturnType = MyReturnType<typeof foo>
+type CalcParameterType = MyParameterType<CalcFnType>
 export{}
+
